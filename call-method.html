@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call apply</title>
+</head>
+<body>
+    
+    <script>
+
+        //object literal means use 1 object in another object
+        const student= {
+            fullname()
+            {
+                return this.fname + " " + this.lname;
+                
+            }
+        }
+
+        const student1 ={
+            fname :"Krishna",
+            lname : "Zaveri"
+        }
+
+        const student2 ={
+            fname :"Heer",
+            lname : "Zaveri"
+        }
+
+        console.log(student.fullname.call(student1));
+
+        console.log(student.fullname.call(student2))
+    </script>
+</body>
+</html>
